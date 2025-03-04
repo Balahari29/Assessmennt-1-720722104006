@@ -12,7 +12,9 @@ public class Line {
         String num2 =""; 
         String res = "";
         for(int j=i;j>=0;j--){
-            if(str.charAt(j) == ' ' && (str.charAt(j+1) != ' ' || j==i)){
+            if(j==i && str.charAt(j) == ' ')
+            continue;
+           else if(str.charAt(j) == ' ' && (str.charAt(j+1) != ' ' || j==i)){
                 res = res + num2 + " "; 
                 num2 = "";
             }
